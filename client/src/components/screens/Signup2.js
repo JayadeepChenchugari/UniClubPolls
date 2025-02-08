@@ -186,7 +186,7 @@ const SignUp = () => {
         </div>
         <br /><br></br>
         <div>
-          <h5 style={{color: "#36454F"}}>Upload a Valid Proof (Aadhar/ Pan/ Driving License ) </h5>
+          <h5 style={{color: "#36454F"}}>Upload a Photo </h5>
         </div>
         <div className="input-group mb-3">
           <input type="file" className="form-control" onChange={(e) => setImage(e.target.files[0])} />
