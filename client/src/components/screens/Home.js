@@ -87,7 +87,7 @@ const Home = () => {
 
   return (
     <div>
-      <div style={{marginTop: "20px", marginLeft: "400px", boxShadow: "1px 4px 10px rgb(1 0 0 / 0.2)", borderRadius: "7px", width: "fit-Content", padding: "3px", paddingLeft:"1%", paddingRight: "1%", backgroundColor: "rgb(244, 245, 246)"}}><h3> Cast your Vote for the below political parties </h3> </div>
+      <div style={{marginTop: "20px", marginLeft: "400px", boxShadow: "1px 4px 10px rgb(1 0 0 / 0.2)", borderRadius: "7px", width: "fit-Content", padding: "3px", paddingLeft:"1%", paddingRight: "1%", backgroundColor: "rgb(244, 245, 246)"}}><h3> Cast your Vote for your Favorite Club </h3> </div>
       <div className="col-md-8" style={{ margin: 'auto', paddingTop: '2%' }}>
         <div className="col-md-3" style={{ float: 'left', border: '1px solid green' }}>
           <Profile />

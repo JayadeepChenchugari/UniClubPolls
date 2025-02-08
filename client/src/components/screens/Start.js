@@ -26,8 +26,8 @@ function Start() {
           </div>
           <div>
             <h1>Vote, <span> </span></h1>
-            <h1>For Your Better <span> </span></h1>
-            <h1>Future <span> </span></h1>
+            <h1>For Your Favourite <span> </span></h1>
+            <h1>Club <span> </span></h1>
             <a href="#about" type="button" className="team">Portfolio</a>
           </div>
         </div>
@@ -92,9 +92,9 @@ function Start() {
             </div>
           </div>
           <div className="col-right">
-            <h1 className="section-title">About <span>us</span></h1><br></br><br></br><br></br>
+            <h1 className="section-title">About <span>Me</span></h1><br></br><br></br><br></br>
             <h2>
-Chenchugari Jayadeep-21bce9238</h2>
+Chenchugari Jayadeep</h2>
             
           </div>
         </div>
@@ -108,23 +108,21 @@ Chenchugari Jayadeep-21bce9238</h2>
               <div className="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" alt="phone icon" /></div>
               <div className="contact-info">
                 <h1>Phone</h1>
-                <h2>+91 962*****</h2>
-                <h2>+91 869*****</h2>
+                <h2>+91 8919019663</h2>
               </div>
             </div>
             <div className="contact-item">
               <div className="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" alt="email icon" /></div>
               <div className="contact-info">
                 <h1>Email</h1>
-                <h2>Team305@gmail.com</h2>
-                <h2>service@gmail.com</h2>
+                <h2>jayadeepchenchugari@gmail.com</h2>
               </div>
             </div>
             <div className="contact-item">
               <div className="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" alt="address icon" /></div>
               <div className="contact-info">
                 <h1>Address</h1>
-                <h2>India</h2>
+                <h2>Nandyal,India</h2>
               </div>
             </div>
           </div>
@@ -134,20 +132,20 @@ Chenchugari Jayadeep-21bce9238</h2>
       <section id="footer">
         <div className="footer container">
           <div className="brand">
-            <h1><span>T</span>eam<span>-</span>305</h1>
+            <h1><span>Jayadeep-</span>Chenchugari</h1>
           </div>
           <div className="social-icon">
             <div className="social-item">
-              <a href="https://www.instagram.com/dil_eep_004/"><img src="https://img.icons8.com/bubbles/100/000000/github.png" alt="" /></a>
+              <a href="https://github.com/JayadeepChenchugari"><img src="https://img.icons8.com/bubbles/100/000000/github.png" alt="" /></a>
             </div>
             <div className="social-item">
-              <a href="https://www.instagram.com/dil_eep_004/"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" alt="Instagram icon" /></a>
+              <a href="https://www.instagram.com/"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" alt="Instagram icon" /></a>
             </div>
             <div className="social-item">
-              <a href="https://www.linkedin.com/public-profile/settings"><img src="https://img.icons8.com/bubbles/100/000000/linkedin.png" alt="LinkedIn icon" /></a>
+              <a href="https://www.linkedin.com/in/jayadeep-chenchugari/"><img src="https://img.icons8.com/bubbles/100/000000/linkedin.png" alt="LinkedIn icon" /></a>
             </div>
           </div>
-          <p>Copyright © Team305. All rights reserved</p>
+          <p>Copyright © JayadeepChenchugari. All rights reserved</p>
         </div>
       </section>
     </>

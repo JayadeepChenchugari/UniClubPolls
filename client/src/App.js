@@ -41,7 +41,6 @@ const Routing = () => {
     fetchData();
 
     return () => {
-      // Cleanup function to cancel any ongoing tasks or subscriptions
       isMounted = false;
     };
 

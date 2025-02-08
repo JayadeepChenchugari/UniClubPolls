@@ -21,7 +21,7 @@ const NavBar = () => {
         <div>
           <Link to={state ? "/" : "/signin"} className="brand-logo center"
             style={{ color: "white", marginLeft: "6px", fontSize: "30px", textDecoration: "none", fontFamily: "Railway" }}>
-            Online Voting System
+            UniClub Polls
           </Link>
         </div>
 

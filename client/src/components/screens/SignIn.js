@@ -17,7 +17,8 @@ const SignIn = () => {
 
   const PostData = () => {
     if (
-      !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)
+      !/^[a-zA-Z0-9._-]+@vitap\.ac\.in$/.test(email)
+
     ) {
       M.toast({ html: "Invalid email", classes: "#c62828 red darken-3" });
       return;
