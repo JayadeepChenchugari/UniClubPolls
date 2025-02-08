@@ -56,7 +56,7 @@ const SignUp = () => {
       return;
     }
 
-    fetch('http://localhost:5000/signup', {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/signup`, {
       method: 'post',
       headers: {
         'Content-Type': 'application/json',

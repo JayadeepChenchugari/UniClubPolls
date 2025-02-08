@@ -7,7 +7,7 @@ function Start() {
 
   useEffect(() => {
     // Fetch posts data from your backend API
-    axios.get('http://localhost:5000/allpost') // Use the correct endpoint
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}/allpost`) // Use the correct endpoint
       .then((response) => {
         setCandidates(response.data.posts); // Update state with fetched data
       })

@@ -23,7 +23,7 @@ const SignIn = () => {
       M.toast({ html: "Invalid email", classes: "#c62828 red darken-3" });
       return;
     };
-    fetch("http://localhost:5000/signin", {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/signin`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
