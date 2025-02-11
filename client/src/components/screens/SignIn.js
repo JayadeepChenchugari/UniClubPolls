@@ -4,52 +4,53 @@ import { userType } from '../utils';
 import { UserContext } from '../../App';
 import M from 'materialize-css';
 import Image from "../../Image/Capture.png";
-import { loadCaptchaEnginge, LoadCanvasTemplate } from 'react-simple-captcha';
+import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 
 const SignIn = () => {
   const { dispatch } = useContext(UserContext);
   const history = useHistory();
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const [captcha, setcaptcha] = useState("");
+  const [captcha, setCaptcha] = useState("");
   const [userItem, setUserItem] = useState("");
   const [isMounted, setIsMounted] = useState(true);
 
   const PostData = () => {
-    if (
-      !/^[a-zA-Z0-9._-]+@vitap\.ac\.in$/.test(email)
-
-    ) {
+    if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)) {
       M.toast({ html: "Invalid email", classes: "#c62828 red darken-3" });
       return;
-    };
+    }
+
+    if (!validateCaptcha(captcha)) {
+      M.toast({ html: "Invalid captcha", classes: "#c62828 red darken-3" });
+      return;
+    }
+    
     fetch(`${process.env.REACT_APP_BACKEND_URL}/signin`, {
-      method: "post",
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        password,
-        email,
-        userItem
+        email: email.trim(),
+        password: password.trim(),
+        userItem,
       }),
     })
-      .then((res) => res.json())
-      .then((data) => {
-        if (isMounted) {
-          if (data.error) {
-            M.toast({ html: data.error, classes: "#c62828 red darken-3" });
-          } else {
-            localStorage.setItem("jwt", data.token);
-            localStorage.setItem("user", JSON.stringify(data.user));
-            dispatch({ type: "USER", payload: data.user });
-            history.push("/");
-          }
-        }
+      .then(async (res) => {
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || "Something went wrong");
+    
+        localStorage.setItem("jwt", data.token);
+        localStorage.setItem("user", JSON.stringify(data.user));
+        dispatch({ type: "USER", payload: data.user });
+        history.push("/");
       })
       .catch((err) => {
-        console.log(err);
+        console.error("Fetch error:", err);
+        M.toast({ html: err.message, classes: "#c62828 red darken-3" });
       });
+    
   }
 
   useEffect(() => {
@@ -102,7 +103,7 @@ const SignIn = () => {
           <div style={{ marginTop: "20px", display: "flex", flexDirection: "column", alignItems: "center" }}>
             <div className="captcha-box" style={{ border: "1px solid #ccc", padding: "10px", borderRadius: "5px", marginBottom: "10px", width: "80%", margin: "0 auto" }}>
               <LoadCanvasTemplate />
-              <input type="text" placeholder='Enter Captcha' onChange={(e) => setcaptcha(e.target.value)} style={{ height: "40px", width: "100%", marginTop: "10px", fontSize: "16px", textAlign: "center", fontFamily: "'Poppins', sans-serif" }} />
+              <input type="text" placeholder='Enter Captcha' onChange={(e) => setCaptcha(e.target.value)} style={{ height: "40px", width: "100%", marginTop: "10px", fontSize: "16px", textAlign: "center", fontFamily: "'Poppins', sans-serif" }} />
             </div>
           </div>
         </div>
