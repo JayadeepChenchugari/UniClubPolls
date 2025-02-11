@@ -42,8 +42,7 @@ const SignUp = () => {
 
   const uploadFields = () => {
     if (
-      !/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)
- ||
+      !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email) ||
       !firstname ||
       !lastname ||
       !password ||
@@ -99,7 +98,7 @@ const SignUp = () => {
     <div className="col-5" style={{height: "100%", width:"60%", display: "grid", placeItems: "center", height: "100vh", width: "100%",
     background: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfH_0fQuREthQDAtyxML6H6hAoGeEX356sw8fCvpW6gFkKecgM8Phvjm_UV0A65tx7hqU&usqp=CAU')no-repeat ", backgroundSize: "cover", backgroundPosition: "center", position: "relative" }}>
       <div className="card" style={{ height: "60%",width: "50%",margin: '%',  position: 'relative',background: 'transparent',border: '2px solid rgba(255, 255, 255, .5)',marginBottom:"7%",borderRadius: '20px',backdropFilter: 'blur(20px)',boxShadow: '0 3px 10px rgb(0 0 0 / 0.2)',justifyContent: 'center',alignItems: 'center',overflow: 'hidden',transition: 'transform .5s ease, height .2s ease',marginTop: '1%',paddingLeft: "40px", paddingRight: "40px", paddingTop: "20px", height: "fit-content", width: "30%", placeItems: "center", marginTop: "3%" }}>
-        <h1 style={{ margin: 'auto', marginBottom: '7px', padding:"4%", fontSize: "25px" }}>Register with College Mail </h1>
+        <h1 style={{ margin: 'auto', marginBottom: '7px', padding:"4%", fontSize: "25px" }}>Registration</h1>
          <div className="row">
           <div className="col">
             <input
@@ -186,7 +185,7 @@ const SignUp = () => {
         </div>
         <br /><br></br>
         <div>
-          <h5 style={{color: "#36454F"}}>Upload a Photo </h5>
+          <h5 style={{color: "#36454F"}}>Upload a Valid Proof (Aadhar/ Pan/ Driving License ) </h5>
         </div>
         <div className="input-group mb-3">
           <input type="file" className="form-control" onChange={(e) => setImage(e.target.files[0])} />
