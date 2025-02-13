@@ -95,9 +95,9 @@ function Start() {
             <h1 className="section-title">About <span>Me</span></h1><br></br><br></br><br></br>
             <h2>
 Chenchugari Jayadeep</h2>
-<h2>
+<h1>
 Login as Admin to see the full Website.
-</h2>
+</h1>
 <h3>
 Username: jayadeepc@gmail.com
 
