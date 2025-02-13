@@ -96,7 +96,7 @@ function Start() {
             <h2>
 Chenchugari Jayadeep</h2>
 <h2>
-Login as Admin to see the full Website / Register to Vote.
+Login as Admin to see the full Website.
 </h2>
 <h3>
 Username: jayadeepc@gmail.com
@@ -105,6 +105,10 @@ Username: jayadeepc@gmail.com
 <h3>
 Password: jayadeep
 </h3>
+
+<h1>
+  To Vote please Register.
+</h1>
             
           </div>
         </div>
